@@ -26,8 +26,8 @@ public class MyController {
         return "læs-mere";
     }
 
-    @GetMapping("/samarbejdspartner")
+    @GetMapping("/samarbejdspartnere")
     public String partner(){
-        return "samarbejdspartner";
+        return "samarbejdspartnere";
     }
 }
