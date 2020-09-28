@@ -17,6 +17,21 @@ public class Product {
         this.productPrice = productPrice;
     }
 
+    public Product() {
+    }
+
+    public void setExpireDate(LocalDate expireDate) {
+        this.expireDate = expireDate;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
     public LocalDate getExpireDate() {
         return expireDate;
     }

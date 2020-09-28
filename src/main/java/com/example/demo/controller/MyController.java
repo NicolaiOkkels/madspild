@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.City;
+import com.example.demo.model.Store;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -12,7 +15,8 @@ public class MyController {
     }
 
     @GetMapping("/forbruger")
-    public String user(){
+    public String user(Model model){
+     //   model.addAttribute("cities",cities.getCities());
         return "forbruger";
     }
 

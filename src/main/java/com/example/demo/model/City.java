@@ -7,14 +7,29 @@ public class City {
 
     private String cityName;
     private int ZipCode;
-    private List<Store> cityStores = new ArrayList<>();
+    private ArrayList<Store> stores = new ArrayList<>();
 
     public City(String cityName, int zipCode) {
         this.cityName = cityName;
         ZipCode = zipCode;
     }
 
-    public void create(Store store){
-        cityStores.add(store);
+    public City() {
+    }
+
+    public ArrayList<Store> getStores() {
+        return stores;
+    }
+
+    public void setStores(ArrayList<Store> stores) {
+        this.stores = stores;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public void setZipCode(int zipCode) {
+        ZipCode = zipCode;
     }
 }

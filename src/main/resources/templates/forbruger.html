@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        p{
+        p {
             text-align: center;
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
-        form{
+
+        form {
             text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            /*padding: 8px;*/
+            padding: 5px 8px 5px 8px;
         }
     </style>
 </head>
 <body>
 <h1>Forbruger</h1>
 <form action="/forbruger" method="post">
-    <p>Intast by</p>
+    <p>Indtast by</p>
     <input type="text" name="By">
     <input type="submit" value="OK">
 </form>
+<br>
+<td th:switch="${cities}">
+    <div th:case="København">
+        <div th:each=""
+</td>
 </body>
 </html>
