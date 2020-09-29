@@ -15,6 +15,21 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, td, th {
+            border: 1px solid #4b804b;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
 <header id="myTopnav">
@@ -35,6 +50,13 @@
     </div>
 
 </header>
+<table>
+<thead>
+<tr>
+    <th>Butikker</th>
+</tr>
+</thead>
+</table>
 <table border="1">
     <tr th:each="city: ${cities}">
         <td th:switch="${cities}">
