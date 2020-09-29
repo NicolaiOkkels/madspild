@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr th:each="city: ${cities}">
+        <td th:switch="${cities}">
+            <div th:case="'København NV'">
+                <div th:each="store: ${city.stores}" th:text="${store.storeName}"></div>
+            </div>
+            <div th:case="'Roskilde'">
+                <div th:each="store: ${city.stores}" th:text="${store.storeName}"></div>
+            </div>
+            <div th:case="'Aahus C'">
+                <div th:each="store: ${city.stores}" th:text="${store.storeName}"></div>
+            </div>
+            <div th:case="'Slagelse'">
+                <div th:each="store: ${city.stores}" th:text="${store.storeName}"></div>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
