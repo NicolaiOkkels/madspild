@@ -15,9 +15,6 @@
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <style>
-        p {
-            text-align: center;
-        }
 
         h1 {
             text-align: center;
@@ -28,11 +25,6 @@
             border: #4b804b;
         }
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
         td, th {
             border: 1px solid #dddddd;
             text-align: left;
@@ -40,23 +32,41 @@
             padding: 5px 8px 5px 8px;
         }
 
+        #ydre_div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .input_text input {
-            width: 20vw;
+            padding: 14px;
+            width: 100%;
             height: 2vw;
             border-radius: 8px;
             border-color: #4b804b;
             text-align: center;
+            border-style: solid;
         }
 
         .enter input {
-            width: 4vw;
-            height: 2vw;
-            background-color: #4b804b;
+            background-image: linear-gradient(140deg, #9ec59a, #4b804b);
             border-radius: 8px;
+            border: none;
+            color: white;
+            padding: 6px 16px;
         }
+
+        .enter input:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+
+
 
     </style>
 </head>
+
 <body>
 <header id="myTopnav">
     <div>
@@ -71,24 +81,25 @@
             </a>
         </div>
         <!--  <div id="border_header">
-            <hr>
-        </div>-->
+        <hr>
+    </div>-->
     </div>
 
 </header>
 <h1>Forbruger</h1>
 <div id="ydre_div">
     <form action="/butikker" method="post">
-        <p>Find butikker i Nærheden af dig</p>
+        <p>Find butikker i nærheden af dig</p>
         <div class="input_text">
             <input type="text" name="By" placeholder="Indtast by">
         </div>
         <br>
         <div class="enter">
-        <input type="submit" value="OK">
+            <input type="submit" value="OK">
         </div>
     </form>
 </div>
+
 <br>
 <footer>
     <div id="footer_info">
