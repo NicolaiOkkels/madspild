@@ -1,18 +1,31 @@
 package com.example.demo.model;
 
-import java.time.LocalDate;
+import com.example.demo.data.CitiesData;
+
 import java.util.ArrayList;
 
-public class Store {
+public class Store{
 
     private String storeName;
     private ArrayList<Product> storeProducts = new ArrayList<>();
 
-    public Store(String storeName) {
-        this.storeName = storeName;
+    public Store() {
     }
 
-    public Store() {
+    public Product loadProduct(int id){
+        for (Product product:storeProducts) {
+            if(product.getProductID()==id){
+                return product;
+            }
+        }
+
+        return null;
+    }
+
+    public void createProduct(Product product){
+        int index = storeProducts.size();
+        product.setProductID(++index);
+        storeProducts.add(product);
     }
 
     public String getStoreName() {
