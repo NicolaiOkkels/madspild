@@ -8,7 +8,7 @@ public class MyController {
 
     @GetMapping("/")
     public String homepage(){
-        return "homepage";
+        return "index";
     }
 
     @GetMapping("/forbruger")
@@ -21,7 +21,7 @@ public class MyController {
         return "kontakt";
     }
 
-    @GetMapping("/læs mere")
+    @GetMapping("/læs-mere")
     public String readMore(){
         return "læs-mere";
     }
