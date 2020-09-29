@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Butikker</title>
+    <title>Vare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -26,23 +26,6 @@
             text-align: left;
             padding: 8px;
         }
-
-        .btn:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .btn {
-            background-color: #4b804b;
-            border: none;
-            color: white;
-            padding: 7px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -62,19 +45,15 @@
             <hr>
         </div>-->
     </div>
-
 </header>
-<table>
-    <thead>
-        <h1>Butikker</h1>
-    </thead>
-</table>
 <table border="1">
-        <tr th:each="store: ${stores}">
-            <td th:text="${store.storeName}"></td>
-            <td>
-                <a href="vare.html" th:href="@{/vare(butik=${store.storeName})}" class="btn">Vare</a>
-            </td>
+        <tr th:each="product: ${products}">
+            <td th:text="'Vare nummer: ' + ${product.productID}"></td>
+            <td th:text="'Vare navn: ' + ${product.productName}"></td>
+            <td th:text="'Orginal pris: ' + ${product.productPrice}"></td>
+            <td th:text="'Discount: ' + ${product.discount} + '%'"></td>
+            <td th:text="'Pris efter discount: Udløbsdato: ' + ${product.calcDiscountPrice}"></td>
+            <td th:text="'Udløbsdato: ' + ${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
         </tr>
 </table>
 <footer>
@@ -101,9 +80,7 @@
         <p> © Copyright 2020 - All Rights Reserved ❘ Designed by Nicolai, Phuc & Maja</p>
     </div>
 
-
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>

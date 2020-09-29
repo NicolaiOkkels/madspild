@@ -10,14 +10,32 @@ public class Product {
     private LocalDate expireDate;
     private String productName;
     private double productPrice;
-
-    public Product(LocalDate expireDate, String productName, double productPrice) {
-        this.expireDate = expireDate;
-        this.productName = productName;
-        this.productPrice = productPrice;
-    }
+    private double discount;
+    private int productID;
 
     public Product() {
+    }
+
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    public double getCalcDiscountPrice(){
+        double discountPrice = productPrice - ((productPrice / discount) * productPrice);
+        double roundOff = Math.round(discountPrice * 100.0) / 100.0;
+        return roundOff;
     }
 
     public void setExpireDate(LocalDate expireDate) {

@@ -1,20 +1,28 @@
 package com.example.demo.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class City {
+
+public class City{
 
     private String cityName;
     private int ZipCode;
     private ArrayList<Store> stores = new ArrayList<>();
 
-    public City(String cityName, int zipCode) {
-        this.cityName = cityName;
-        ZipCode = zipCode;
+    public City() {
     }
 
-    public City() {
+    public void createStore(Store store){
+        stores.add(store);
+    }
+
+    public Store loadStore(String storeName){
+        for (Store store: stores) {
+            if(store.getStoreName() == storeName){
+                return store;
+            }
+        }
+        return null;
     }
 
     public ArrayList<Store> getStores() {
