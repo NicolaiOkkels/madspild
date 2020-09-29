@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 public class CitiesData {
-
+//test
     private static ArrayList<City> cities = new ArrayList<>();
 
     public static ArrayList<City> generateCities(){

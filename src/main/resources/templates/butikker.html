@@ -2,9 +2,39 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Butikker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="myIcons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="myIcons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="myIcons/favicon-16x16.png">
+    <link rel="manifest" href="myIcons/site.webmanifest">
+    <link rel="shortcut icon" href="myIcons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="myIcons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+<header id="myTopnav">
+    <div>
+        <div class="topnav">
+            <a href="/"></a>
+            <a href="/kontakt">Kontakt</a>
+            <a href="/forbruger">Forbruger</a>
+            <a href="/læs-mere">Læs mere</a>
+            <a href="/samarbejdspartnere">Samarbejdspartnere</a>
+            <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <!--  <div id="border_header">
+            <hr>
+        </div>-->
+    </div>
+
+</header>
 <table border="1">
     <tr th:each="city: ${cities}">
         <td th:switch="${cities}">
@@ -23,5 +53,33 @@
         </td>
     </tr>
 </table>
+<footer>
+    <div id="footer_info">
+        <div class="kontakt">
+            <p><b>Telefon</b></p>
+            <a href="tel:+4540720601">+45 40 72 06 01</a>
+        </div>
+
+        <div class="kontakt">
+            <p><b>Email</b></p>
+            <a href="mailto:info@stopspildafmad.org">info@stopspildafmad.org</a>
+        </div>
+
+        <div class="kontakt">
+            <p><b>Følg os</b></p>
+            <a href="https://www.facebook.com/Madspild" aria-label="facebook" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/stopmadspilddanmark/" aria-label="instagram" class="fa fa-instagram"></a>
+
+        </div>
+    </div>
+    <div class="copyright">
+
+        <p> © Copyright 2020 - All Rights Reserved ❘ Designed by Nicolai, Phuc & Maja</p>
+    </div>
+
+
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
