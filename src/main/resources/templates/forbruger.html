@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -31,15 +31,11 @@
 </head>
 <body>
 <h1>Forbruger</h1>
-<form action="/forbruger" method="post">
+<form action="/butikker" method="post">
     <p>Indtast by</p>
     <input type="text" name="By">
     <input type="submit" value="OK">
 </form>
 <br>
-<td th:switch="${cities}">
-    <div th:case="København">
-        <div th:each=""
-</td>
 </body>
 </html>

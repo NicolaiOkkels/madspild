@@ -7,9 +7,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ProductData {
-    private ArrayList<Product> storeProducts = new ArrayList<>();
+    private static ArrayList<Product> storeProducts = new ArrayList<>();
 
-    public ArrayList<Product> generateProduct(){
+    public static ArrayList<Product> generateProduct(){
         if(storeProducts.isEmpty()){
             Product product1 = new Product();
             product1.setProductName("Æble");

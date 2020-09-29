@@ -29,6 +29,14 @@ public class City {
         this.cityName = cityName;
     }
 
+    public String getCityName() {
+        return cityName;
+    }
+
+    public int getZipCode() {
+        return ZipCode;
+    }
+
     public void setZipCode(int zipCode) {
         ZipCode = zipCode;
     }
