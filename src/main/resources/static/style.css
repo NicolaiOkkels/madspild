@@ -1,7 +1,8 @@
-*{
+* {
     box-sizing: border-box;
-    font-family: "Comic Sans MS";
+    font-family: 'Quicksand', sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,10 +12,11 @@ body {
     padding: 0;
 }
 
-h1{
+h1 {
     text-align: center;
     color: #535353;
     font-size: 25px;
+    margin: 3vw;
 }
 
 h2 {
@@ -23,15 +25,11 @@ h2 {
     font-size: 18px;
 }
 
-
-
-
 /*-------Navigation-------*/
 
 header {
     background-image: linear-gradient(to right, #d0f3cc, #9bd895, #78a978);
 }
-
 
 
 /*#border_header hr {
@@ -82,6 +80,7 @@ header {
     display: none;
 }
 
+
 /*-------Navigation slut-------*/
 
 /*-------Slideshow-------*/
@@ -97,6 +96,7 @@ header {
     height: 90vh;
     width: 100%;
     background-size: cover;
+
 }
 
 .img2 {
@@ -162,10 +162,6 @@ header {
     opacity: 0;
 }
 
-.galleryContainer .slideShowContainer .imageHolder .captionText {
-    display: none;
-}
-
 
 .galleryContainer .slideShowContainer > .captionTextHolder {
     position: absolute;
@@ -211,7 +207,7 @@ header {
     }
 
     to {
-        margin-left: 0%;
+        margin-left: 0;
         opacity: 1;
     }
 }
@@ -250,7 +246,7 @@ header {
     }
 
     to {
-        margin-left: 0%;
+        margin-left: 0;
         opacity: 1;
     }
 }
@@ -264,12 +260,12 @@ header {
 @keyframes slideTextFromBottom {
     from {
         opacity: 0;
-        margin-top: 100px
+        margin-top: 100px;
     }
 
     to {
         opacity: 1;
-        margin-top: 0px;
+        margin-top: 0;
     }
 }
 
@@ -287,7 +283,7 @@ header {
 
     to {
         opacity: 1;
-        margin-top: 0px;
+        margin-top: 0;
     }
 }
 
@@ -296,6 +292,8 @@ header {
     text-transform: uppercase;
     font-size: 5vw;
     color: white;
+    font-weight: bolder;
+
 }
 
 .splash_text {
@@ -306,6 +304,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
+
 }
 
 #splash_container a span {
@@ -338,6 +337,75 @@ header {
 
 
 /*-------Slideshow slut-------*/
+
+
+/*-----Kontakt-----*/
+
+#kontakt_content {
+    margin: 5vw;
+}
+
+#top {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.billede_madspild {
+    background-image: url(/images/kontakt.jpg);
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.20);
+}
+
+.sectionwrapper {
+    margin-top: 2vw;
+    flex-basis: 200px;
+    flex-grow: 1;
+    line-height: 20px;
+}
+
+.sectionwrapper1 {
+    margin-top: 2vw;
+    flex-basis: 300px;
+    flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.08);
+    line-height: 1.7;
+}
+
+
+.kant h2 {
+    text-align: center;
+}
+
+.sectionwrapper1 .kant {
+    margin: 1vw;
+    line-height: 32px;
+}
+
+.sectionwrapper1 .kant a,
+p {
+    font-size: 14px;
+}
+
+.kant iframe {
+    height: 25vw;
+    width: 35vw;
+}
+
+.sectionwrapper1 a {
+    color: black;
+}
+
+.sectionwrapper1 a:hover {
+    opacity: 0.5;
+}
+
+
+
+/*------Kontakt slut------*/
 
 /*-------Footer-------*/
 
@@ -435,6 +503,18 @@ a.fa-instagram:before {
         text-align: center;
     }
 
+    .sectionwrapper1,
+    .sectionwrapper p {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10vw;
+    }
+
+
+    .kant_frame iframe {
+        height: 55vw;
+        width: 80vw;
+    }
 
 }
 
@@ -481,15 +561,21 @@ a.fa-instagram:before {
         font-size: 15px;
     }
 
-    /*forside.html*/
     .splash_text h1 {
         font-size: 50px;
         text-align: left;
+        line-height: 70px;
     }
 
     #splash_container a span {
-
         padding: 2vw;
+    }
 
+    .sectionwrapper1 {
+        margin-left: 4vw;
+    }
+
+    .kant h2 {
+        text-align: start;
     }
 }
