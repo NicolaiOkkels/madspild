@@ -33,6 +33,7 @@ public class Product {
         this.discount = discount;
     }
 
+    //TODO:Virker ikke som forventet
     public double getCalcDiscountPrice(){
         double discountPrice = productPrice - ((productPrice / discount) * productPrice);
         double roundOff = Math.round(discountPrice * 100.0) / 100.0;

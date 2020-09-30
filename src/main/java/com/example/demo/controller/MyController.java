@@ -7,6 +7,7 @@ import com.example.demo.model.Store;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -44,19 +45,36 @@ public class MyController {
         return "fejlside";
     }
 
+<<<<<<< HEAD
     @PostMapping("/varer")
     public String products(@RequestParam("butik") String storeName,  Model model){
         if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(0).getStoreName().equals(storeName)){
+=======
+    @GetMapping("/varer")
+    public String products(@RequestParam("by")String cityName, @RequestParam("butik")String storeName, Model model){
+        if(citiesList.get(0).getCityName().equals(cityName) && citiesList.get(0).getStores().get(0).getStoreName().equals(storeName)){
+>>>>>>> 340712180c73d323a37eaeea514753fd43be2bf6
             ArrayList<Product> productList = citiesList.get(0).getStores().get(0).getStoreProducts();
             model.addAttribute("products", productList);
-        }else if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(1).getStoreName().equals(storeName)){
+            return "varer";
+        }else if(citiesList.get(0).getCityName().equals(cityName) && citiesList.get(0).getStores().get(1).getStoreName().equals(storeName)){
             ArrayList<Product> productList = citiesList.get(0).getStores().get(1).getStoreProducts();
             model.addAttribute("products", productList);
-        }else if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(2).getStoreName().equals(storeName)){
-            ArrayList<Product> productList = citiesList.get(0).getStores().get(2).getStoreProducts();
+            return "varer";
+        }else if(citiesList.get(0).getCityName().equals(cityName) && citiesList.get(0).getStores().get(2).getStoreName().equals(storeName)){
+            ArrayList<Product> productList = citiesList.get(1).getStores().get(2).getStoreProducts();
             model.addAttribute("products", productList);
+            return "varer";
+        }else if(citiesList.get(1).getCityName().equals(cityName) && citiesList.get(1).getStores().get(0).getStoreName().equals(storeName)){
+            ArrayList<Product> productList = citiesList.get(1).getStores().get(1).getStoreProducts();
+            model.addAttribute("products", productList);
+            return "varer";
+        }else if(citiesList.get(1).getCityName().equals(cityName) && citiesList.get(1).getStores().get(1).getStoreName().equals(storeName)){
+            ArrayList<Product> productList = citiesList.get(1).getStores().get(1).getStoreProducts();
+            model.addAttribute("products", productList);
+            return "varer";
         }
-        return "varer";
+        return "fejlside";
     }
 
     @GetMapping("/butikker")

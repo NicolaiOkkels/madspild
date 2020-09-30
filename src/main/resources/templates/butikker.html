@@ -28,6 +28,19 @@
             padding: 8px;
         }
 
+        .enter input {
+            background-image: linear-gradient(140deg, #9ec59a, #2a612a);
+            border-radius: 8px;
+            border: none;
+            color: white;
+            padding: 6px 16px;
+        }
+
+        .enter input:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
         .btn:hover {
             opacity: 0.8;
             cursor: pointer;
@@ -68,18 +81,18 @@
 
 <table>
     <thead>
-        <h1>Butikker</h1>
+    <h1>Butikker</h1>
     </thead>
 </table>
 <table border="1">
     <tr th:text="${city}"></tr>
-        <tr th:each="store: ${stores}">
-            <td th:text="${store.storeName}"></td>
-            <td th:text="${store.adresse}"></td>
-            <td>
-                <a href="varer.html" th:href="@{/vare(butik=${store.storeName})}" class="btn">Se varer</a>
-            </td>
-        </tr>
+    <tr th:each="store: ${stores}">
+        <td th:text="${store.storeName}"></td>
+        <td th:text="${store.adresse}"></td>
+        <td>
+            <a th:href="@{/varer(by=${city},butik=(${store.storeName}))}" class="btn">Se varer</a>
+        </td>
+    </tr>
 </table>
 <footer>
     <div id="footer_info">
