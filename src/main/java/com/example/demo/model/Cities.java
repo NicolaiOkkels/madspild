@@ -52,6 +52,8 @@ public class Cities {
             product3.setDiscount(75);
             product3.setExpireDate(LocalDate.of(2020,10,1));
 
+            store3.createProduct(product3);
+
             //------------------------------------------------------------------------------------------//
             City city2 = new City();
             city2.setCityName("Roskilde");
