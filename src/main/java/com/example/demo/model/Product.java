@@ -12,6 +12,7 @@ public class Product {
     private double productPrice;
     private double discount;
     private int productID;
+    private boolean isReserved;
 
     public Product() {
     }
@@ -50,6 +51,10 @@ public class Product {
         this.productPrice = productPrice;
     }
 
+    public void setReserved(boolean reserved) {
+        isReserved = reserved;
+    }
+
     public LocalDate getExpireDate() {
         return expireDate;
     }
@@ -61,4 +66,10 @@ public class Product {
     public double getProductPrice() {
         return productPrice;
     }
+
+    public boolean isReserved() {
+        return isReserved;
+    }
+
+
 }
