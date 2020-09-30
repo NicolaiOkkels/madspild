@@ -1,14 +1,9 @@
-package com.example.demo.data;
-
-import com.example.demo.model.City;
-import com.example.demo.model.Product;
-import com.example.demo.model.Store;
+package com.example.demo.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-
-public class CitiesData {
+public class Cities {
 
     private ArrayList<City> cities = new ArrayList<>();
 
@@ -64,7 +59,7 @@ public class CitiesData {
             cities.add(city2);
 
             Store store4 = new Store();
-            store4.setStoreName("Lokal købmand");
+            store4.setStoreName("Lokale købmand");
             store4.setAdresse("Købmand addresse");
             city2.createStore(store4);
 
@@ -92,5 +87,4 @@ public class CitiesData {
 
         return cities;
     }
-
 }

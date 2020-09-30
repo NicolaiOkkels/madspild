@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.data.CitiesData;
+import com.example.demo.model.Cities;
 import com.example.demo.model.City;
 import com.example.demo.model.Product;
 import com.example.demo.model.Store;
@@ -15,8 +15,8 @@ import java.util.ArrayList;
 @Controller
 public class MyController {
 
-    private CitiesData data = new CitiesData();
-    private ArrayList<City> cities = data.generateCities();
+    private Cities cities = new Cities();
+    private ArrayList<City> citiesList = cities.generateCities();
 
     @GetMapping("/")
     public String homepage(){
@@ -30,11 +30,11 @@ public class MyController {
 
     @PostMapping("/butikker")
     public String storesInYourCity(@RequestParam("by") String cityName, Model model){
-        if(cities.get(0).getCityName().equalsIgnoreCase(cityName)){
-            ArrayList<Store> kbhStore = cities.get(0).getStores();
+        if(citiesList.get(0).getCityName().equalsIgnoreCase(cityName)){
+            ArrayList<Store> kbhStore = citiesList.get(0).getStores();
             model.addAttribute("stores", kbhStore);
-        } else if(cities.get(1).getCityName().equalsIgnoreCase(cityName)){
-            ArrayList<Store> roskildeStore = cities.get(1).getStores();
+        } else if(citiesList.get(1).getCityName().equalsIgnoreCase(cityName)){
+            ArrayList<Store> roskildeStore = citiesList.get(1).getStores();
             model.addAttribute("stores", roskildeStore);
         }
         return "butikker";
@@ -42,8 +42,14 @@ public class MyController {
 
     @PostMapping("/vare")
     public String products(@RequestParam("butik")String storeName,  Model model){
-        if(cities.get(0).getCityName().equals("København NV") && cities.get(0).getStores().get(0).getStoreName().equals(storeName)){
-            ArrayList<Product> productList = cities.get(0).getStores().get(0).getStoreProducts();
+        if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(0).getStoreName().equals(storeName)){
+            ArrayList<Product> productList = citiesList.get(0).getStores().get(0).getStoreProducts();
+            model.addAttribute("products", productList);
+        }else if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(1).getStoreName().equals(storeName)){
+            ArrayList<Product> productList = citiesList.get(0).getStores().get(1).getStoreProducts();
+            model.addAttribute("products", productList);
+        }else if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(2).getStoreName().equals(storeName)){
+            ArrayList<Product> productList = citiesList.get(0).getStores().get(2).getStoreProducts();
             model.addAttribute("products", productList);
         }
         return "vare";

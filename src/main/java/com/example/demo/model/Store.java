@@ -1,7 +1,5 @@
 package com.example.demo.model;
 
-import com.example.demo.data.CitiesData;
-
 import java.util.ArrayList;
 
 public class Store{
@@ -11,6 +9,10 @@ public class Store{
     private ArrayList<Product> storeProducts = new ArrayList<>();
 
     public Store() {
+    }
+
+    public String getAdresse() {
+        return adresse;
     }
 
     public void setAdresse(String adresse) {
