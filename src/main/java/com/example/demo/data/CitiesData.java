@@ -22,7 +22,7 @@ public class CitiesData {
             City city2 = new City();
             city2.setCityName("Roskilde");
             city2.setZipCode(4000);
-            city1.setStores(data.generateRoskildeStores());
+            city2.setStores(data.generateRoskildeStores());
 
             cities.add(city2);
         }
