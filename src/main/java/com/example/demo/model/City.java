@@ -16,15 +16,6 @@ public class City{
         stores.add(store);
     }
 
-    public Store loadStore(String storeName){
-        for (Store store: stores) {
-            if(store.getStoreName() == storeName){
-                return store;
-            }
-        }
-        return null;
-    }
-
     public ArrayList<Store> getStores() {
         return stores;
     }

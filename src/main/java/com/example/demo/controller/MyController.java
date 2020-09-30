@@ -30,10 +30,10 @@ public class MyController {
 
     @PostMapping("/butikker")
     public String storesInYourCity(@RequestParam("by") String cityName, Model model){
-        if(cities.get(0).getCityName().equals(cityName)){
+        if(cities.get(0).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> kbhStore = cities.get(0).getStores();
             model.addAttribute("stores", kbhStore);
-        } else if(cities.get(1).getCityName().equals(cityName)){
+        } else if(cities.get(1).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> roskildeStore = cities.get(1).getStores();
             model.addAttribute("stores", roskildeStore);
         }
@@ -41,7 +41,7 @@ public class MyController {
     }
 
     @PostMapping("/vare")
-    public String products(@RequestParam("butik")String storeName, Model model){
+    public String products(@RequestParam("butik")String storeName,  Model model){
         if(cities.get(0).getCityName().equals("København NV") && cities.get(0).getStores().get(0).getStoreName().equals(storeName)){
             ArrayList<Product> productList = cities.get(0).getStores().get(0).getStoreProducts();
             model.addAttribute("products", productList);

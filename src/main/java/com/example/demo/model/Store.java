@@ -7,19 +7,14 @@ import java.util.ArrayList;
 public class Store{
 
     private String storeName;
+    private String adresse;
     private ArrayList<Product> storeProducts = new ArrayList<>();
 
     public Store() {
     }
 
-    public Product loadProduct(int id){
-        for (Product product:storeProducts) {
-            if(product.getProductID()==id){
-                return product;
-            }
-        }
-
-        return null;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
     public void createProduct(Product product){
