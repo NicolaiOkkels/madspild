@@ -32,15 +32,19 @@ public class MyController {
     public String storesInYourCity(@RequestParam("by") String cityName, Model model){
         if(citiesList.get(0).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> kbhStore = citiesList.get(0).getStores();
+            model.addAttribute("city", cityName);
             model.addAttribute("stores", kbhStore);
+            return "butikker";
         } else if(citiesList.get(1).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> roskildeStore = citiesList.get(1).getStores();
+            model.addAttribute("city", cityName);
             model.addAttribute("stores", roskildeStore);
+            return "butikker";
         }
-        return "butikker";
+        return "fejlside";
     }
 
-    @PostMapping("/vare")
+    @PostMapping("/varer")
     public String products(@RequestParam("butik")String storeName,  Model model){
         if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(0).getStoreName().equals(storeName)){
             ArrayList<Product> productList = citiesList.get(0).getStores().get(0).getStoreProducts();
@@ -52,7 +56,7 @@ public class MyController {
             ArrayList<Product> productList = citiesList.get(0).getStores().get(2).getStoreProducts();
             model.addAttribute("products", productList);
         }
-        return "vare";
+        return "varer";
     }
 
     @GetMapping("/butikker")

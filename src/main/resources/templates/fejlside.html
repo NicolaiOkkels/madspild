@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Butikker</title>
+    <title>Fejlside</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -17,32 +17,9 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        table, td, th {
-            border: 1px solid #4b804b;
-            text-align: left;
-            padding: 8px;
-        }
-
-        .btn:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .btn {
-            background-color: #4b804b;
-            border: none;
-            color: white;
-            padding: 7px 10px;
+        h1{
+            font-size: 50px;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
         }
     </style>
 </head>
@@ -65,21 +42,7 @@
     </div>
 
 </header>
-<table>
-    <thead>
-        <h1>Butikker</h1>
-    </thead>
-</table>
-<table border="1">
-    <tr th:text="${city}"></tr>
-        <tr th:each="store: ${stores}">
-            <td th:text="${store.storeName}"></td>
-            <td th:text="${store.adresse}"></td>
-            <td>
-                <a href="varer.html" th:href="@{/vare(butik=${store.storeName})}" class="btn">Se varer</a>
-            </td>
-        </tr>
-</table>
+<h1>Der skete en fejl!</h1>
 <footer>
     <div id="footer_info">
         <div class="kontakt">
