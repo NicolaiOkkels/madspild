@@ -73,7 +73,7 @@
         <tr th:each="store: ${stores}">
             <td th:text="${store.storeName}"></td>
             <td>
-                <a href="vare.html" th:href="@{/vare(butik=${store.storeName})}" class="btn">Vare</a>
+                <a href="vare.html" th:href="@{/vare(butik=${store.storeName})}" class="btn">Se varer</a>
             </td>
         </tr>
 </table>
