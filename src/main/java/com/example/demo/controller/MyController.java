@@ -45,7 +45,7 @@ public class MyController {
     }
 
     @PostMapping("/varer")
-    public String products(@RequestParam("butik")String storeName,  Model model){
+    public String products(@RequestParam("butik") String storeName,  Model model){
         if(citiesList.get(0).getCityName().equals("København NV") && citiesList.get(0).getStores().get(0).getStoreName().equals(storeName)){
             ArrayList<Product> productList = citiesList.get(0).getStores().get(0).getStoreProducts();
             model.addAttribute("products", productList);
