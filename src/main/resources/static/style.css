@@ -26,27 +26,28 @@ h2 {
 }
 
 /*-------Navigation-------*/
-
-header {
-    background-image: linear-gradient(to right, #d0f3cc, #9bd895, #78a978);
+#myTopnav {
+    background-image: linear-gradient(to right, #ddffdd, #a5e8a5, #f2fff1);
 }
 
-
-/*#border_header hr {
+#border_header hr {
     width: 94%;
     height: 4px;
     margin: 0 auto;
-    background-image: linear-gradient(to right, #83b483, #bfebbb);
+    background-image: linear-gradient(to right, #ddffdd, #76ad71, #f2fff1);
     border-style: none;
-    margin-top: 1vw;
-}*/
-
-.topnav {
-    overflow: hidden;
-    width: 100%;
 }
 
-
+.topnav a {
+    float: left;
+    display: block;
+    color: #6f906f;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 3;
+    font-weight: 500;
+}
 .topnav a:first-child {
     background-image: url(/images/logo5.png);
     background-size: cover;
@@ -54,21 +55,18 @@ header {
     height: 10vw;
     margin: 2vw;
 }
+.topnav {
+    overflow: hidden;
+    width: 100%;
+}
 
-.topnav a:first-child:hover {
-    opacity: 0.6;
+
+.topnav a:not(:first-child):hover {
+    text-decoration: underline;
+    opacity: 0.7;
 
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 18px;
-    z-index: 3;
-}
 
 .topnav a:not(:first-child):hover {
     text-decoration: underline;
@@ -358,7 +356,7 @@ header {
     box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.20);
 }
 
-.sectionwrapper {
+.sectionwrapper_laes {
     margin-top: 2vw;
     flex-basis: 200px;
     flex-grow: 1;
@@ -406,6 +404,64 @@ p {
 
 
 /*------Kontakt slut------*/
+
+/*------Læs mere------*/
+
+
+.laes-mere_box_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 3px 6px 2px rgba(0, 0, 0, 0.09);
+    margin: 0 12vw 6vw 12vw;
+    padding: 4vw 2vw 4vw 2vw;
+    justify-content: space-around;
+}
+
+.laes-mere_text {
+    flex-basis: 300px;
+    line-height: 25px;
+}
+
+.laes-mere_picture {
+    flex-basis: 400px;
+}
+
+.laes-mere_picture img {
+    width: 35vw;
+    height: 20vw;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.10);
+
+}
+
+#laes-mere_content .sectionwrapper_laes {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("/images/background_laes-mere.png");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 4rem;
+    margin-bottom: 5vw;
+    justify-content: center;
+}
+
+#laes-mere_content .col {
+    flex-basis: 220px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.10);
+    margin: 3rem;
+    padding: 1.5rem;
+    border-radius: 2%;
+    align-items: center;
+
+}
+
+#laes-mere_content .icons {
+    text-align: center;
+}
+
+/*------Læs mere slut------*/
 
 /*-------Footer-------*/
 
@@ -510,13 +566,22 @@ a.fa-instagram:before {
         margin-top: 5vw;
     }
 
-    .sectionwrapper {}
+    .sectionwrapper_laes {}
 
     .kant_frame iframe {
         height: 55vw;
         width: 80vw;
     }
 
+    .laes-mere_box_wrapper {
+        text-align: center;
+    }
+
+    .laes-mere_picture img {
+        width: 100%;
+        height: 35vw;
+
+    }
 }
 
 
@@ -578,5 +643,9 @@ a.fa-instagram:before {
 
     .kant h2 {
         text-align: start;
+    }
+    .laes-mere_box_wrapper h2 {
+        text-align: start;
+        margin: 0;
     }
 }

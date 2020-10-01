@@ -14,10 +14,25 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px solid rgba(0, 0, 0, 0);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
 </head>
 <body>
 
@@ -33,12 +48,15 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <!--  <div id="border_header">
+        <div id="border_header">
             <hr>
-        </div>-->
+        </div>
     </div>
 
 </header>
+
+
+
 
 <div style="background-color:white;color:white;padding:20px;">
     <h1 style="font-size:40px">Samarbejdspartnere</h1>
@@ -46,30 +64,33 @@
     at skabe en mere bæredygtig fremtid.</h2>
 </div>
 
-<div style="background-color:white;color:black;padding:20px;width:25%;height:100px;float:left;">
-    <a href="https://netto.dk/">
-        <img src="/images/nettologo.jpeg" alt="NettoLogo" style="width:496px;height:219px;">
-    </a>
-</div>
 
-<div style="background-color:white;color:black;padding:20px;margin-left:25%;height:100px;">
-    <a href="https://www.lidl.dk/">
-        <img src="/images/lidllogo.png" alt="LidlLogo" style="width:219px;height:219px;">
+<div class="grid-container">
+    <div class="grid-item">
+        <a href="https://netto.dk/">
+            <img src="/images/nettologo.jpeg" alt="NettoLogo" style="width:496px;height:219px;">
     </a>
-</div>
-<br>
-<br>
-
-<div style="background-color:white;color:black;padding:20px;margin-right:25%;height:100px;">
-    <a href="https://www.foetex.dk/">
-        <img src="/images/fotexlogo.png" alt="FøtexLogo" style="width:263px;height:192px;">
+    </div>
+    <div class="grid-item">
+        <a href="https://www.lidl.dk/">
+            <img src="/images/lidllogo.png" alt="LidlLogo" style="width:219px;height:219px;">
     </a>
-</div>
-
-<div style="background-color:white;color:black;padding:20px;width:25%;height:100px;float:right;">
-    <a href="https://meny.dk/">
-        <img src="/images/menylogo.png" alt="MenyLogo" style="width:647px;height:277px;">
+    </div>
+    <div class="grid-item">
+        <a href="https://www.foetex.dk/">
+            <img src="/images/fotexlogo.png" alt="FøtexLogo" style="width:263px;height:192px;">
     </a>
+    </div>
+    <div class="grid-item">
+        <a href="https://meny.dk/">
+            <img src="/images/menylogo.png" alt="MenyLogo" style="width:647px;height:277px;">
+        </a>
+    </div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
 </div>
 
 <footer>
