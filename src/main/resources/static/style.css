@@ -61,12 +61,9 @@ h2 {
 }
 
 
-.topnav a:not(:first-child):hover {
-    text-decoration: underline;
+.topnav a:first-child:hover {
     opacity: 0.7;
-
 }
-
 
 .topnav a:not(:first-child):hover {
     text-decoration: underline;
