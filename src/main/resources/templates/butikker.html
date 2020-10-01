@@ -30,19 +30,21 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-          <div id="border_header">
+        <div id="border_header">
             <hr>
         </div>
     </div>
 
 </header>
-<table>
-    <thead>
+<div>
     <h1>Butikker</h1>
-    </thead>
-</table>
+</div>
 <table border="1">
-    <tr th:text="${city}"></tr>
+    <tr id="first_table_color">
+        <td th:text="'By: ' + ${city}"></td>
+        <td th:text="'Postnr. '+${zipCode}"></td>
+        <td></td>
+    </tr>
     <tr th:each="store: ${stores}">
         <td th:text="${store.storeName}"></td>
         <td th:text="${store.adresse}"></td>

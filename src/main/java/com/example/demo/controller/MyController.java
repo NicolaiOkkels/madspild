@@ -33,11 +33,13 @@ public class MyController {
         if(citiesList.get(cities.readCityIndex(cityName)).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> kbhStore = citiesList.get(cities.readCityIndex(cityName)).getStores();
             model.addAttribute("city", cities.refactorCityName(cityName));
+            model.addAttribute("zipCode", citiesList.get(cities.readCityIndex(cityName)).getZipCode());
             model.addAttribute("stores", kbhStore);
             return "butikker";
         } else if(citiesList.get(cities.readCityIndex(cityName)).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> roskildeStore = citiesList.get(cities.readCityIndex(cityName)).getStores();
             model.addAttribute("city", cities.refactorCityName(cityName));
+            model.addAttribute("zipCode", citiesList.get(cities.readCityIndex(cityName)).getZipCode());
             model.addAttribute("stores", roskildeStore);
             return "butikker";
         }
