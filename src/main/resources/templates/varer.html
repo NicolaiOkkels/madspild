@@ -71,7 +71,7 @@
         <td th:text="'Varenavn: ' + ${product.productName}"></td>
         <td th:text="'Orginal pris: ' + ${product.productPrice} + ' kr.'"></td>
         <td th:text="'Discount: ' + ${product.discount} + ' %'"></td>
-        <td th:text="'Pris efter discount: ' + ${product.calcDiscountPrice}"></td>
+        <td th:text="'Pris efter discount: ' + ${product.calcDiscountPrice} + ' kr.'"></td>
         <td th:text="'Udløbsdato: ' + ${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
     </tr>
 </table>
