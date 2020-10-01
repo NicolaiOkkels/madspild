@@ -3,7 +3,7 @@ package com.example.demo.model;
 import java.util.ArrayList;
 
 
-public class City{
+public class City {
 
     private String cityName;
     private int ZipCode;
@@ -12,8 +12,18 @@ public class City{
     public City() {
     }
 
-    public void createStore(Store store){
+    public void createStore(Store store) {
         stores.add(store);
+    }
+
+    public int readStoreIndex(String storeName) {
+        int index = 0;
+        for (int i = 0; i < stores.size(); i++) {
+            if(stores.get(i).getStoreName().equals(storeName)){
+                index = i;
+            }
+        }
+        return index;
     }
 
     public ArrayList<Store> getStores() {

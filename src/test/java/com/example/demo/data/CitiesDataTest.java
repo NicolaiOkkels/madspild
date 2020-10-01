@@ -13,7 +13,7 @@ class CitiesDataTest {
     @Test
     void validateCityList() {
         //arrange
-        ArrayList<City> citiesList = cities.generateCities();
+        ArrayList<City> citiesList = cities.buildCities();
         //act
         String name1 = "København NV";
         String name2 = "Roskilde";
@@ -25,7 +25,7 @@ class CitiesDataTest {
     @Test
     void validateStoreList() {
         //arrange
-        ArrayList<City> citiesList = cities.generateCities();
+        ArrayList<City> citiesList = cities.buildCities();
         //act
         String act1 = "Netto";
         String exp1 = citiesList.get(0).getStores().get(0).getStoreName(); //KBH NV
@@ -40,7 +40,7 @@ class CitiesDataTest {
     @Test
     void validateProductList() {
         //arrange
-        ArrayList<City> citiesList = cities.generateCities();
+        ArrayList<City> citiesList = cities.buildCities();
         //act
         String act1 = "Æble";
         String exp1 = citiesList.get(0).getStores().get(0).getStoreProducts().get(0).getProductName();

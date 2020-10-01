@@ -1,8 +1,9 @@
 package com.example.demo.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Store{
+public class Store {
 
     private String storeName;
     private String adresse;
@@ -19,7 +20,7 @@ public class Store{
         this.adresse = adresse;
     }
 
-    public void createProduct(Product product){
+    public void createProduct(Product product) {
         int index = storeProducts.size();
         product.setProductID(++index);
         storeProducts.add(product);

@@ -7,8 +7,8 @@ public class Cities {
 
     private ArrayList<City> cities = new ArrayList<>();
 
-    public ArrayList<City> generateCities(){
-        if(cities.isEmpty()){
+    public ArrayList<City> buildCities() {
+        if (cities.isEmpty()) {
 
             City city1 = new City();
             city1.setCityName("København NV");
@@ -24,7 +24,7 @@ public class Cities {
             product1.setProductName("Æble");
             product1.setProductPrice(10);
             product1.setDiscount(75);
-            product1.setExpireDate(LocalDate.of(2020,9,26));
+            product1.setExpireDate(LocalDate.of(2020, 9, 26));
 
             store1.createProduct(product1);
 
@@ -37,7 +37,7 @@ public class Cities {
             product2.setProductName("Banan");
             product2.setProductPrice(12);
             product2.setDiscount(75);
-            product2.setExpireDate(LocalDate.of(2020,9,30));
+            product2.setExpireDate(LocalDate.of(2020, 9, 30));
 
             store2.createProduct(product2);
 
@@ -50,7 +50,7 @@ public class Cities {
             product3.setProductName("Pære");
             product3.setProductPrice(12);
             product3.setDiscount(75);
-            product3.setExpireDate(LocalDate.of(2020,10,1));
+            product3.setExpireDate(LocalDate.of(2020, 10, 1));
 
             store3.createProduct(product3);
 
@@ -69,7 +69,7 @@ public class Cities {
             product4.setProductName("Brød");
             product4.setProductPrice(20);
             product4.setDiscount(75);
-            product4.setExpireDate(LocalDate.of(2020,9,26));
+            product4.setExpireDate(LocalDate.of(2020, 9, 26));
 
             store4.createProduct(product4);
 
@@ -82,11 +82,21 @@ public class Cities {
             product5.setProductName("Grøntsagskasse");
             product5.setProductPrice(100);
             product5.setDiscount(75);
-            product5.setExpireDate(LocalDate.of(2020,10,2));
+            product5.setExpireDate(LocalDate.of(2020, 10, 2));
 
             store5.createProduct(product5);
         }
 
         return cities;
+    }
+
+    public int readCityIndex(String cityName) {
+        int index = 0;
+        for (int i = 0; i < cities.size(); i++) {
+            if(cities.get(i).getCityName().equals(cityName)){
+                index = i;
+            }
+        }
+        return index;
     }
 }
