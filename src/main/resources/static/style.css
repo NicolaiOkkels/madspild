@@ -105,16 +105,13 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
-    width: 500%;
-    height: 100%;
-    animation: slidy 18s 0s backwards infinite;
     height: 90vh;
     width: 100%;
     background-size: cover;
 }
 
 .img3 {
-    background-image: url("images/splash2.jpg");
+    background-image: url("images/splash8.jpg");
     background-position: 75% 0;
     position: absolute;
     height: 90vh;
@@ -123,8 +120,8 @@ h2 {
 }
 
 .img4 {
-    background-image: url("images/splash4.jpg");
-    background-position: 90% 0;
+    background-image: url("images/splash9.jpg");
+    background-position: 80% 30%;
     position: absolute;
     height: 90vh;
     width: 100%;
@@ -132,7 +129,7 @@ h2 {
 }
 
 .img5 {
-    background-image: url("images/splash5.jpg");
+    background-image: url("images/splash10.jpg");
     background-position: 90% 0;
     position: absolute;
     height: 90vh;
