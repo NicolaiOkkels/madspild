@@ -93,10 +93,19 @@ public class Cities {
     public int readCityIndex(String cityName) {
         int index = 0;
         for (int i = 0; i < cities.size(); i++) {
-            if(cities.get(i).getCityName().equals(cityName)){
+            if (cities.get(i).getCityName().equals(cityName)) {
                 index = i;
             }
         }
         return index;
+    }
+
+    public String refactorCityName(String cityName) {
+        for (City city : cities) {
+            if(city.getCityName().equalsIgnoreCase(cityName)){
+               return city.getCityName();
+            }
+        }
+        return null;
     }
 }

@@ -32,12 +32,12 @@ public class MyController {
     public String storesInYourCity(@RequestParam("by") String cityName, Model model){
         if(citiesList.get(cities.readCityIndex(cityName)).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> kbhStore = citiesList.get(cities.readCityIndex(cityName)).getStores();
-            model.addAttribute("city", cityName);
+            model.addAttribute("city", cities.refactorCityName(cityName));
             model.addAttribute("stores", kbhStore);
             return "butikker";
         } else if(citiesList.get(cities.readCityIndex(cityName)).getCityName().equalsIgnoreCase(cityName)){
             ArrayList<Store> roskildeStore = citiesList.get(cities.readCityIndex(cityName)).getStores();
-            model.addAttribute("city", cityName);
+            model.addAttribute("city", cities.refactorCityName(cityName));
             model.addAttribute("stores", roskildeStore);
             return "butikker";
         }
