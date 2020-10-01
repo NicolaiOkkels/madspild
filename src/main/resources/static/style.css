@@ -5,11 +5,15 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    position: relative;
 }
 
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    position: relative;
 }
 
 h1 {
@@ -17,6 +21,7 @@ h1 {
     color: #535353;
     font-size: 25px;
     margin: 3vw;
+    padding-bottom: 3vw;
 }
 
 h2 {
@@ -41,7 +46,7 @@ h2 {
 .topnav a {
     float: left;
     display: block;
-    color: #6f906f;
+    color: #4b804b;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 18px;
@@ -69,7 +74,7 @@ h2 {
 
 .topnav a:not(:first-child):hover {
     text-decoration: underline;
-    color: #4b804b;
+    opacity: 0.7;
 
 }
 
@@ -365,7 +370,8 @@ h2 {
 /*-----Kontakt-----*/
 
 #kontakt_content {
-    margin: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 #top {
@@ -382,14 +388,12 @@ h2 {
 }
 
 .sectionwrapper_laes {
-    margin-top: 2vw;
     flex-basis: 200px;
     flex-grow: 1;
     line-height: 20px;
 }
 
 .sectionwrapper1 {
-    margin-top: 2vw;
     flex-basis: 300px;
     flex-grow: 2;
     display: flex;
@@ -487,12 +491,110 @@ p {
 
 /*------Læs mere slut------*/
 
-/*-------Footer-------*/
+/*-------Table-----*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
+table, td, th {
+    border: 1px solid #4b804b;
+    text-align: left;
+    padding: 8px;
+}
+
+#first_table_color td {
+    background-color: #4b804b;
+    border-style: inherit;
+    border-color: inherit;
+    color: white;
+}
+
+/*-------Button-----*/
+.button1 {
+    background-color: #4b804b;
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.button2 {
+    background-color: #4b804b;
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*-------Input-----*/
+
+form {
+    text-align: center;
+    border: #4b804b;
+}
+
+#ydre_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input_text input {
+    padding: 14px;
+    width: 40vw;
+    height: 3vw;
+    border-radius: 8px;
+    border-color: #4b804b;
+    text-align: center;
+    border-style: solid;
+    font-size: 20px;
+}
+
+.enter input {
+    background-image: linear-gradient(140deg, #9ec59a, #2a612a);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 6px 16px;
+}
+
+.enter input:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*-------Header-----*/
+
+#search_header h1 {
+    text-align: center;
+    line-height: 2px;
+}
+
+#error_header h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/*-------Footer-------*/
 footer {
     margin-top: 8vw;
     width: 100%;
-    background-color: #aed6e7;
+    background-color: #96c5d4;
     color: white;
     bottom: 0;
 }
@@ -678,100 +780,6 @@ a.fa-instagram:before {
         width: 5vw;
         height: 5vw;
     }
-
-/*-------Table-----*/
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    table, td, th {
-        border: 1px solid black;
-        text-align: left;
-        padding: 8px;
-    }
-
-    #first_table_color td {
-        background-color: #4b804b;
-        border: black;
-    }
-
-/*-------Button-----*/
-    .button1 {
-        background-color: #4b804b;
-        border: none;
-        color: white;
-        padding: 7px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        border-radius: 5px;
-    }
-
-    .button2 {
-        background-color: #4b804b;
-        border: none;
-        color: white;
-        padding: 7px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        border-radius: 5px;
-    }
-
-    .button1:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
-
-/*-------Input-----*/
-
-    form {
-        text-align: center;
-        border: #4b804b;
-    }
-
-    #ydre_div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .input_text input {
-        padding: 14px;
-        width: 40vw;
-        height: 3vw;
-        border-radius: 8px;
-        border-color: #4b804b;
-        text-align: center;
-        border-style: solid;
-        font-size: 20px;
-    }
-
-    .enter input {
-        background-image: linear-gradient(140deg, #9ec59a, #2a612a);
-        border-radius: 8px;
-        border: none;
-        color: white;
-        padding: 6px 16px;
-    }
-
-    .enter input:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
-
-/*-------Header-----*/
-
-    #search_header h1 {
-        text-align: center;
-        line-height: 2px;
-    }
-
-    #error_header h1{
-        font-size: 50px;
-        text-align: center;
-    }
 }
+
+
