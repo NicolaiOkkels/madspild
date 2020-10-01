@@ -60,12 +60,14 @@
     <td>Udløbsdato</td>
     </div>
     <tr th:each="product:${products}">
+
         <td th:text="${product.productID}"></td>
         <td th:text="${product.productName}"></td>
         <td th:text="${product.productPrice} + ' kr.'"></td>
         <td th:text="${product.discount} + ' %'"></td>
         <td th:text="${product.calcDiscountPrice}"></td>
         <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
+
     </tr>
 </table>
 <footer>
