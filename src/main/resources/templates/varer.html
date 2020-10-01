@@ -40,29 +40,29 @@
 </div>
 
 <div class="scrolling">
-<table border="1">
-    <tr id="first_table_color">
-        <td>Varenummer</td>
-        <td>Varenavn</td>
-        <td>Orginal pris</td>
-        <td>Discount</td>
-        <td>Pris efter discount</td>
-        <td>Udløbsdato</td>
-        <td>Reserver vare</td>
-    </tr>
-    <tr th:each="product:${products}">
-        <td th:text="${product.productID}"></td>
-        <td th:text="${product.productName}"></td>
-        <td th:text="${product.productPrice} + ' kr.'"></td>
-        <td th:text="${product.discount} + ' %'"></td>
-        <td th:text="${product.calcDiscountPrice} + ' kr.'"></td>
-        <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
-        <td>
-            <span th:if="${product.reserved == true}"class="button2">Reserveret</span>
-            <span th:unless="${product.reserved == true}" class="button1">Bestil</span>
-        </td>
-    </tr>
-</table>
+    <table border="1">
+        <tr id="first_table_color">
+            <td>Varenummer</td>
+            <td>Varenavn</td>
+            <td>Orginal pris</td>
+            <td>Discount</td>
+            <td>Pris efter discount</td>
+            <td>Udløbsdato</td>
+            <td>Reserver vare</td>
+        </tr>
+        <tr th:each="product:${products}">
+            <td th:text="${product.productID}"></td>
+            <td th:text="${product.productName}"></td>
+            <td class ="line" th:text="${product.productPrice} + ' kr.'"></td>
+            <td th:text="${product.discount} + ' %'"></td>
+            <td th:text="${product.calcDiscountPrice} + ' kr.'"></td>
+            <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
+            <td>
+                <span th:if="${product.reserved == true}" class="button2">Reserveret</span>
+                <span th:unless="${product.reserved == true}" class="button1">Bestil</span>
+            </td>
+        </tr>
+    </table>
 
 </div>
 <br>

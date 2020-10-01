@@ -514,6 +514,10 @@ tr:nth-child(even) {
     color: white;
 }
 
+.line {
+    text-decoration: line-through;
+}
+
 /*Scrollbar i hver sektion*/
 /* width */
 .scrolling {
