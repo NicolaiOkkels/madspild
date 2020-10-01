@@ -48,6 +48,7 @@ h2 {
     z-index: 3;
     font-weight: 500;
 }
+
 .topnav a:first-child {
     background-image: url(/images/logo5.png);
     background-size: cover;
@@ -55,6 +56,7 @@ h2 {
     height: 10vw;
     margin: 2vw;
 }
+
 .topnav {
     overflow: hidden;
     width: 100%;
@@ -425,7 +427,6 @@ p {
 }
 
 
-
 /*------Kontakt slut------*/
 
 /*------Læs mere------*/
@@ -589,7 +590,8 @@ a.fa-instagram:before {
         margin-top: 5vw;
     }
 
-    .sectionwrapper_laes {}
+    .sectionwrapper_laes {
+    }
 
     .kant_frame iframe {
         height: 55vw;
@@ -606,7 +608,6 @@ a.fa-instagram:before {
 
     }
 }
-
 
 
 /*-------Desktop skærme-----*/
@@ -667,12 +668,110 @@ a.fa-instagram:before {
     .kant h2 {
         text-align: start;
     }
+
     .laes-mere_box_wrapper h2 {
         text-align: start;
         margin: 0;
     }
+
     .grid-itempic img {
         width: 5vw;
         height: 5vw;
+    }
+
+/*-------Table-----*/
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+    }
+
+    #first_table_color td {
+        background-color: #4b804b;
+        border: black;
+    }
+
+/*-------Button-----*/
+    .button1 {
+        background-color: #4b804b;
+        border: none;
+        color: white;
+        padding: 7px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .button2 {
+        background-color: #4b804b;
+        border: none;
+        color: white;
+        padding: 7px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .button1:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+/*-------Input-----*/
+
+    form {
+        text-align: center;
+        border: #4b804b;
+    }
+
+    #ydre_div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .input_text input {
+        padding: 14px;
+        width: 40vw;
+        height: 3vw;
+        border-radius: 8px;
+        border-color: #4b804b;
+        text-align: center;
+        border-style: solid;
+        font-size: 20px;
+    }
+
+    .enter input {
+        background-image: linear-gradient(140deg, #9ec59a, #2a612a);
+        border-radius: 8px;
+        border: none;
+        color: white;
+        padding: 6px 16px;
+    }
+
+    .enter input:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+/*-------Header-----*/
+
+    #search_header h1 {
+        text-align: center;
+        line-height: 2px;
+    }
+
+    #error_header h1{
+        font-size: 50px;
+        text-align: center;
     }
 }

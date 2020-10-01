@@ -16,51 +16,6 @@
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        table, td, th {
-            border: 1px solid #4b804b;
-            text-align: left;
-            padding: 8px;
-        }
-
-        #first_table_color td {
-            background-color: #4b804b;
-            border: black;
-        }
-
-        .button1:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .button1 {
-            background-color: #4b804b;
-            border: none;
-            color: white;
-            padding: 7px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
-        }
-        .button2 {
-            background-color: #4b804b;
-            border: none;
-            color: white;
-            padding: 7px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
 <header id="myTopnav">
@@ -95,7 +50,7 @@
         <td th:text="${product.productName}"></td>
         <td th:text="${product.productPrice} + ' kr.'"></td>
         <td th:text="${product.discount} + ' %'"></td>
-        <td th:text="${product.calcDiscountPrice}"></td>
+        <td th:text="${product.calcDiscountPrice} + ' kr.'"></td>
         <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
         <td>
             <span th:if="${product.reserved == true}"class="button2">Reserveret</span>
