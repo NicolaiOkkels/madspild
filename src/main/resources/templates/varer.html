@@ -27,8 +27,9 @@
             text-align: left;
             padding: 8px;
         }
-
-
+        #first_table_color td {
+            background-color: #4b804b;
+        }
     </style>
 </head>
 <body>
@@ -50,12 +51,14 @@
     </div>
 </header>
 <table border="1">
+    <div id="first_table_color">
     <td>Varenummer</td>
     <td>Varer navn</td>
     <td>Orginal pris</td>
     <td>Discount</td>
     <td>Pris efter discount</td>
     <td>Udløbsdato</td>
+    </div>
     <tr th:each="product:${products}">
         <td th:text="${product.productID}"></td>
         <td th:text="${product.productName}"></td>
