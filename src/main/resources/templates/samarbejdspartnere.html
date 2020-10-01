@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,20 +22,34 @@
             display: grid;
             grid-template-columns: auto auto auto;
             background-color: #ffffff;
-            padding: 10px;
-            grid-row-gap: 80px;
+            text-align: center;
+
         }
+
         .grid-item {
             background-color: rgba(255, 255, 255, 0);
             border: 1px solid rgba(0, 0, 0, 0);
             padding: 20px;
             font-size: 30px;
-            text-align: center;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto;
+                text-align: center;
+            }
+
+            .grid-item img {
+                max-width: 80vw;
+                max-height: 40vw;
+            }
         }
     </style>
-</head>
 
 </head>
+
 <body>
 
 <header id="myTopnav">
@@ -57,49 +72,48 @@
 </header>
 
 
-
-
 <div style="background-color:white;color:white;padding:20px;">
     <h1 style="font-size:40px">Samarbejdspartnere</h1>
 </div>
 
-    <div class="laes-mere_box_wrapper">
-        <div class="laes-mere_text">
-            <h2>Samarbejde med mange butikker</h2>
-            <p>Nedenstående samarbejdspartnere er med til at deltage i kampen mod madspild og er med til
-                at skabe en mere bæredygtig fremtid.</p>
-        </div>
-
-        <div class="laes-mere_picture">
-            <img src="/images/foodheader.jpg" alt="SharingFood">
-        </div>
+<div class="laes-mere_box_wrapper">
+    <div class="laes-mere_text">
+        <h2>Samarbejde med mange butikker</h2>
+        <p>Nedenstående samarbejdspartnere er med til at deltage i kampen mod madspild og er med til
+            at skabe en mere bæredygtig fremtid.</p>
     </div>
+
+    <div class="laes-mere_picture">
+        <img src="/images/foodheader.jpg" alt="SharingFood">
+    </div>
+</div>
+
 
 
 <div class="grid-container">
     <div class="grid-item">
         <a href="https://netto.dk/">
-            <img src="/images/nettologo.jpeg" alt="NettoLogo" style="width:496px;height:219px;">
-    </a>
+            <img src="/images/nettologo.jpeg" alt="NettoLogo" style="width:400px;height:215px;">
+        </a>
     </div>
     <div class="grid-item">
         <a href="https://www.lidl.dk/">
-            <img src="/images/lidllogo.png" alt="LidlLogo" style="width:219px;height:219px;">
-    </a>
+            <img src="/images/lidllogo.png" alt="LidlLogo" style="width:220px;height:220px;">
+        </a>
     </div>
     <div class="grid-item">
         <a href="https://www.foetex.dk/">
-            <img src="/images/fotexlogo.png" alt="FøtexLogo" style="width:263px;height:192px;">
-    </a>
+            <img src="/images/fotexlogo.png" alt="FøtexLogo" style="width:240px;height:190px;">
+        </a>
     </div>
     <div class="grid-item">
         <a href="https://meny.dk/">
-            <img src="/images/menylogo.png" alt="MenyLogo" style="width:485.25px;height:207.75px;">
+            <img src="/images/menylogo.png" alt="MenyLogo" style="width:450.25px;height:207.75px;">
         </a>
     </div>
     <div class="grid-item">
         <a href="https://rema1000.dk/">
-            <img src="/images/remalogo.png" alt="Rema1000Logo" style="width:400px;height:243.6px;">
+            <img src="/images/remalogo.png" alt="Rema1000Logo" style="width:350px;height:240px;">
         </a>
     </div>
     <div class="grid-item">
@@ -150,4 +164,5 @@
 
 <script src="script.js"></script>
 </body>
+
 </html>
