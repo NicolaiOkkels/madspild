@@ -29,22 +29,6 @@
         }
 
 
-        .btn:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .btn {
-            background-color: #4b804b;
-            border: none;
-            color: white;
-            padding: 7px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -66,17 +50,21 @@
     </div>
 </header>
 <table border="1">
+    <td>Varenummer</td>
+    <td>Varer navn</td>
+    <td>Orginal pris</td>
+    <td>Discount</td>
+    <td>Pris efter discount</td>
+    <td>Udløbsdato</td>
     <tr th:each="product:${products}">
-        <td th:text="'Varenummer: ' + ${product.productID}"></td>
-        <td th:text="'Varenavn: ' + ${product.productName}"></td>
-        <td th:text="'Orginal pris: ' + ${product.productPrice} + ' kr.'"></td>
-        <td th:text="'Discount: ' + ${product.discount} + ' %'"></td>
-        <td th:text="'Pris efter discount: ' + ${product.calcDiscountPrice}"></td>
-        <td th:text="'Udløbsdato: ' + ${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
+        <td th:text="${product.productID}"></td>
+        <td th:text="${product.productName}"></td>
+        <td th:text="${product.productPrice} + ' kr.'"></td>
+        <td th:text="${product.discount} + ' %'"></td>
+        <td th:text="${product.calcDiscountPrice}"></td>
+        <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
     </tr>
 </table>
-
-
 <footer>
     <div id="footer_info">
         <div class="kontakt">

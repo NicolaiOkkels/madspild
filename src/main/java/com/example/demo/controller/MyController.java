@@ -46,8 +46,8 @@ public class MyController {
 
     @GetMapping("/varer")
     public String products(@RequestParam("by")String cityName, @RequestParam("butik")String storeName, Model model){
-        if(citiesList.get(cities.readCityIndex(cityName)).getCityName().equals(cityName) && citiesList.get(cities.readCityIndex(cityName)).getStores().get(citiesList.get(cities.readCityIndex(cityName)).readStoreIndex(storeName)).getStoreName().equals(storeName)){
-            ArrayList<Product> productList = citiesList.get(cities.readCityIndex(cityName)).getStores().get(cities.readCityIndex(cityName)).getStoreProducts();
+        if(citiesList.get(cities.readCityIndex(cityName)).getCityName().equals(cityName) && citiesList.get(cities.readCityIndex(cityName)).getStores().get(citiesList.get(cities.readCityIndex(cityName)).readStoreIndex(storeName)).getStoreName().equalsIgnoreCase(storeName)){
+            ArrayList<Product> productList = citiesList.get(cities.readCityIndex(cityName)).getStores().get(citiesList.get(cities.readCityIndex(cityName)).readStoreIndex(storeName)).getStoreProducts();
             model.addAttribute("products", productList);
         }
         return "varer";
