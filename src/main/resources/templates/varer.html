@@ -27,8 +27,38 @@
             text-align: left;
             padding: 8px;
         }
+
         #first_table_color td {
             background-color: #4b804b;
+            border: black;
+        }
+
+        .button1:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: #4b804b;
+            border: none;
+            color: white;
+            padding: 7px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        .button2 {
+            background-color: #4b804b;
+            border: none;
+            color: white;
+            padding: 7px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -51,23 +81,26 @@
     </div>
 </header>
 <table border="1">
-    <div id="first_table_color">
-    <td>Varenummer</td>
-    <td>Varer navn</td>
-    <td>Orginal pris</td>
-    <td>Discount</td>
-    <td>Pris efter discount</td>
-    <td>Udløbsdato</td>
-    </div>
+    <tr id="first_table_color">
+        <td>Varenummer</td>
+        <td>Varer navn</td>
+        <td>Orginal pris</td>
+        <td>Discount</td>
+        <td>Pris efter discount</td>
+        <td>Udløbsdato</td>
+        <td>Reserver varer</td>
+    </tr>
     <tr th:each="product:${products}">
-
         <td th:text="${product.productID}"></td>
         <td th:text="${product.productName}"></td>
         <td th:text="${product.productPrice} + ' kr.'"></td>
         <td th:text="${product.discount} + ' %'"></td>
         <td th:text="${product.calcDiscountPrice}"></td>
         <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
-
+        <td>
+            <span th:if="${product.reserved == true}"class="button2">Reserveret</span>
+            <span th:unless="${product.reserved == true}" class="button1">Bestil</span>
+        </td>
     </tr>
 </table>
 <footer>

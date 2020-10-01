@@ -41,12 +41,12 @@
             cursor: pointer;
         }
 
-        .btn:hover {
+        .button1:hover {
             opacity: 0.8;
             cursor: pointer;
         }
 
-        .btn {
+        .button1 {
             background-color: #4b804b;
             border: none;
             color: white;
@@ -89,7 +89,7 @@
         <td th:text="${store.storeName}"></td>
         <td th:text="${store.adresse}"></td>
         <td>
-            <a th:href="@{/varer(by=${city},butik=(${store.storeName}))}" class="btn">Se varer</a>
+            <a th:href="@{/varer(by=${city},butik=(${store.storeName}))}" class="button1">Se varer</a>
         </td>
     </tr>
 </table>
