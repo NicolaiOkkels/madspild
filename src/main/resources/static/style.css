@@ -6,14 +6,12 @@
 html {
     scroll-behavior: smooth;
     height: 100%;
-    position: relative;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    position: relative;
 }
 
 h1 {
@@ -107,16 +105,13 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
-    width: 500%;
-    height: 100%;
-    animation: slidy 18s 0s backwards infinite;
     height: 90vh;
     width: 100%;
     background-size: cover;
 }
 
 .img3 {
-    background-image: url("images/splash2.jpg");
+    background-image: url("images/splash8.jpg");
     background-position: 75% 0;
     position: absolute;
     height: 90vh;
@@ -125,8 +120,8 @@ h2 {
 }
 
 .img4 {
-    background-image: url("images/splash4.jpg");
-    background-position: 90% 0;
+    background-image: url("images/splash9.jpg");
+    background-position: 80% 30%;
     position: absolute;
     height: 90vh;
     width: 100%;
@@ -134,8 +129,8 @@ h2 {
 }
 
 .img5 {
-    background-image: url("images/splash5.jpg");
-    background-position: 90% 0;
+    background-image: url("images/splash10.jpg");
+    background-position: 20% 0;
     position: absolute;
     height: 90vh;
     width: 100%;
@@ -495,6 +490,8 @@ p {
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 1vw;
+
 }
 
 table, td, th {
@@ -503,12 +500,48 @@ table, td, th {
     padding: 8px;
 }
 
+tr:nth-child(even) {
+    background-color: #f1f6ef;
+}
+
 #first_table_color td {
     background-color: #4b804b;
     border-style: inherit;
     border-color: inherit;
     color: white;
 }
+
+.line {
+    text-decoration: line-through;
+}
+
+/*Scrollbar i hver sektion*/
+/* width */
+.scrolling {
+    overflow-x: auto;
+}
+.scrolling::-webkit-scrollbar {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Track */
+.scrolling::-webkit-scrollbar-track {
+    background-color: #d6dee2;
+    border-radius: 10px;
+}
+
+/* Handle */
+.scrolling::-webkit-scrollbar-thumb {
+    background-color: #4b804b;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.scrolling::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(75, 128, 75, 0.4);
+}
+
 
 /*-------Button-----*/
 .button1 {
@@ -563,7 +596,10 @@ form {
     border-style: solid;
     font-size: 20px;
 }
-
+input:focus {
+    outline-width: 0;
+    border-color: #9ec59a;
+}
 .enter input {
     background-image: linear-gradient(140deg, #9ec59a, #2a612a);
     border-radius: 8px;
@@ -576,6 +612,7 @@ form {
     opacity: 0.8;
     cursor: pointer;
 }
+
 
 /*-------Header-----*/
 
@@ -708,6 +745,9 @@ a.fa-instagram:before {
         width: 100%;
         height: 35vw;
 
+    }
+    footer {
+        margin-top: 30vw;
     }
 }
 
