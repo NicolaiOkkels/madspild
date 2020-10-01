@@ -333,6 +333,32 @@ h2 {
     }
 }
 
+#forside_section .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2vw;
+    padding: 10px;
+    margin: 0vw 15vw 15vw 15vw;
+    align-content: center;
+}
+
+#forside_section .grid-item {
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.08);
+    padding: 35px;
+    text-align: center;
+}
+
+.grid-itempic {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-itempic img {
+    width: 13vw;
+    height: 13vw;
+}
+
 
 /*-------Slideshow slut-------*/
 
@@ -647,5 +673,9 @@ a.fa-instagram:before {
     .laes-mere_box_wrapper h2 {
         text-align: start;
         margin: 0;
+    }
+    .grid-itempic img {
+        width: 5vw;
+        height: 5vw;
     }
 }
