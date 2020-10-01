@@ -15,57 +15,7 @@
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-
-        h1 {
-            text-align: center;
-            line-height: 2px;
-        }
-
-        form {
-            text-align: center;
-            border: #4b804b;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            /*padding: 8px;*/
-            padding: 5px 8px 5px 8px;
-        }
-
-        #ydre_div {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .input_text input {
-            padding: 14px;
-            width: 40vw;
-            height: 3vw;
-            border-radius: 8px;
-            border-color: #4b804b;
-            text-align: center;
-            border-style: solid;
-            font-size: 20px;
-        }
-
-        .enter input {
-            background-image: linear-gradient(140deg, #9ec59a, #2a612a);
-            border-radius: 8px;
-            border: none;
-            color: white;
-            padding: 6px 16px;
-        }
-
-        .enter input:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-    </style>
 </head>
-
 <body>
 <header id="myTopnav">
     <div>
@@ -83,12 +33,9 @@
             <hr>
         </div>
     </div>
-
 </header>
-
-<h1>Find og bestil billige madvarer nær dig</h1>
-<h1>&</h1>
-<h1>Vær med til at formindske madspild</h1>
+<h1 id="search_header">Find og bestil billige madvarer nær dig
+    <br> & <br> Vær med til at formindske madspild </h1>
 <div id="ydre_div">
     <form action="/butikker" method="post">
         <div class="input_text">
