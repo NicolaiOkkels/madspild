@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class City {
 
     private String cityName;
-    private int ZipCode;
     private ArrayList<Store> stores = new ArrayList<>();
 
     public City() {
@@ -40,13 +39,5 @@ public class City {
 
     public String getCityName() {
         return cityName;
-    }
-
-    public int getZipCode() {
-        return ZipCode;
-    }
-
-    public void setZipCode(int zipCode) {
-        ZipCode = zipCode;
     }
 }
