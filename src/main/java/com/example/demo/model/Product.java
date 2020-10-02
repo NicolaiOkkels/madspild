@@ -13,8 +13,17 @@ public class Product {
     private double discount;
     private int productID;
     private boolean isReserved;
+    private int quantity;
 
     public Product() {
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     public int getProductID() {
