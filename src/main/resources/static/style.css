@@ -286,17 +286,16 @@ header {
 .splash_text h1 {
     padding: 0 0 20vw 0;
     text-transform: uppercase;
-    font-size: 5vw;
+    font-size: 30px;
     color: white;
     font-weight: bolder;
-
 }
 
 .splash_text {
     position: absolute;
     text-align: center;
     color: white;
-    top: 85%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
@@ -306,8 +305,8 @@ header {
 #splash_container a span {
     position: absolute;
     padding: 4vw;
-    bottom: 6vw;
     left: 50%;
+    bottom: 12%;
     width: 30px;
     height: 30px;
     border-left: 4px solid #fff;
@@ -488,16 +487,17 @@ p {
 /*-------Table-----*/
 table {
     width: 90%;
-    border: 1px solid #4b804b;
+    border: 1px solid rgb(71, 188, 117);
     text-align: left;
     padding: 8px;
     margin-left: 5vw;
     border-collapse: collapse;
     height: auto;
+    margin-bottom: 1vw;
 }
 
 td, th {
-    border: 1px solid #4b804b;
+    border: 1px solid rgb(71, 188, 117);
     text-align: left;
     padding: 8px;
     width: 8px;
@@ -508,7 +508,7 @@ tr:nth-child(even) {
 }
 
 #first_table_color td {
-    background-color: #4b804b;
+    background-color: rgb(71, 188, 117);
     border-style: inherit;
     border-color: inherit;
     color: white;
@@ -525,7 +525,7 @@ tr:nth-child(even) {
 }
 
 .scrolling::-webkit-scrollbar {
-    width: 100%;
+    width: 5%;
     border-radius: 10px;
 }
 
@@ -537,7 +537,7 @@ tr:nth-child(even) {
 
 /* Handle */
 .scrolling::-webkit-scrollbar-thumb {
-    background-color: #4b804b;
+    background-color: rgb(71, 188, 117);
     border-radius: 10px;
 }
 
@@ -549,7 +549,7 @@ tr:nth-child(even) {
 
 /*-------Button-----*/
 .button1 {
-    background-color: #4b804b;
+    background-color: rgb(71, 188, 117);
     border: none;
     color: white;
     padding: 7px 10px;
@@ -577,8 +577,8 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
-.button3{
-    background-image: linear-gradient(140deg, #9ec59a, #2a612a);
+.button3 {
+    background-color: rgb(22, 156, 104);
     border: none;
     color: white;
     padding: 6px 16px;
@@ -624,7 +624,7 @@ input:focus {
 }
 
 .enter input {
-    background-image: linear-gradient(140deg, #9ec59a, #2a612a);
+    background-color: rgb(22, 156, 104);
     border-radius: 8px;
     border: none;
     color: white;
@@ -640,16 +640,28 @@ input:focus {
 
 /*-------Header-----*/
 
-#search_header h1 {
-    text-align: center;
-    line-height: 2px;
-}
 
 #error_header h1 {
     font-size: 50px;
     text-align: center;
 }
 
+/*-------Samarbejdspartnere-----*/
+.grid-container_sam {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #ffffff;
+    text-align: center;
+    row-gap: 50px;
+
+}
+
+.grid-item_sam {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 20px;
+    font-size: 30px;
+}
 
 /*-------Footer-------*/
 footer {
@@ -720,6 +732,10 @@ a.fa-instagram:before {
 /*-------Media queries-------*/
 
 @media screen and (max-width: 700px) {
+    h1 {
+        margin-top: 20vw;
+    }
+
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -753,7 +769,6 @@ a.fa-instagram:before {
         margin-top: 5vw;
     }
 
-    .sectionwrapper_laes {}
 
     .kant_frame iframe {
         height: 55vw;
@@ -773,6 +788,26 @@ a.fa-instagram:before {
     footer {
         margin-top: 30vw;
     }
+
+    .grid-container_sam {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .grid-item_sam img {
+        max-width: 80vw;
+        max-height: 40vw;
+    }
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+    .enter input {
+        margin-bottom: 6vw;
+    }
+
 }
 
 
@@ -820,6 +855,10 @@ a.fa-instagram:before {
         font-size: 50px;
         text-align: left;
         line-height: 70px;
+    }
+
+    .splash_text {
+        top: 85%;
     }
 
     #splash_container a span {
