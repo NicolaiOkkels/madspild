@@ -36,25 +36,14 @@ header {
     background-image: linear-gradient(140deg, transparent 52%, rgb(71, 188, 117) 0%);
     z-index: 5;
 }
-
+.sticky + .content {
+    padding-top: 102px;
+}
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
-
-.sticky + .content {
-    padding-top: 102px;
-}
-
-#border_header hr {
-    width: 94%;
-    height: 4px;
-    margin: 0 auto;
-    background-image: linear-gradient(to right, #ddffdd, #76ad71, #f2fff1);
-    border-style: none;
-}
-
 .topnav a {
     float: left;
     display: block;
