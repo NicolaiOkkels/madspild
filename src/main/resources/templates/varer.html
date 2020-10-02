@@ -50,7 +50,7 @@
         <tr th:each="product:${products}">
             <td th:text="${product.quantity}"></td>
             <td th:text="${product.productName}"></td>
-            <td class ="line" th:text="${product.productPrice} + ' kr.'"></td>
+            <td class="line" th:text="${product.productPrice} + ' kr.'"></td>
             <td th:text="${product.discount} + ' %'"></td>
             <td th:text="${product.calcDiscountPrice} + ' kr.'"></td>
             <td th:text="${#temporals.format(product.expireDate,'d MMMM yyyy')}"></td>
