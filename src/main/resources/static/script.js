@@ -92,6 +92,6 @@ function moveSlide(n) {
 function setTimer() {
     timer = setInterval(function () {
         plusSlides(1);
-    }, 3000);
+    }, 5000);
 }
 setTimer();
