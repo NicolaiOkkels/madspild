@@ -487,7 +487,7 @@ p {
 /*-------Table-----*/
 table {
     width: 90%;
-    border: 1px solid rgb(71, 188, 117);
+    border: 1px solid rgb(22, 156, 104);
     text-align: left;
     padding: 8px;
     margin-left: 5vw;
@@ -497,7 +497,7 @@ table {
 }
 
 td, th {
-    border: 1px solid rgb(71, 188, 117);
+    border: 1px solid rgb(22, 156, 104);
     text-align: left;
     padding: 8px;
     width: 8px;
@@ -508,7 +508,7 @@ tr:nth-child(even) {
 }
 
 #first_table_color td {
-    background-color: rgb(71, 188, 117);
+    background-color: rgb(22, 156, 104);
     border-style: inherit;
     border-color: inherit;
     color: white;
