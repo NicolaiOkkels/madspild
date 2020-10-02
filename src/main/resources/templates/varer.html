@@ -30,9 +30,6 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <div id="border_header">
-            <hr>
-        </div>
     </div>
 </header>
 <div>
@@ -42,16 +39,16 @@
 <div class="scrolling">
     <table border="1">
         <tr id="first_table_color">
-            <td>Varenummer</td>
-            <td>Varenavn</td>
-            <td>Orginal pris</td>
-            <td>Discount</td>
-            <td>Pris efter discount</td>
-            <td>Udløbsdato</td>
-            <td>Reserver vare</td>
+            <td>Antal varer:</td>
+            <td>Varenavn:</td>
+            <td>Orginal pris:</td>
+            <td>Discount:</td>
+            <td>Pris efter discount:</td>
+            <td>Udløbsdato:</td>
+            <td>Reserver vare:</td>
         </tr>
         <tr th:each="product:${products}">
-            <td th:text="${product.productID}"></td>
+            <td th:text="${product.quantity}"></td>
             <td th:text="${product.productName}"></td>
             <td class ="line" th:text="${product.productPrice} + ' kr.'"></td>
             <td th:text="${product.discount} + ' %'"></td>
@@ -67,7 +64,7 @@
 </div>
 <br>
 <div id="ydre_div">
-    <a th:href="@{/butikker(by=${city})}" class="button1">Butikker</a>
+    <a th:href="@{/butikker(by=${city})}" class="button3">Tilbage til butikker</a>
 </div>
 <footer>
     <div id="footer_info">
