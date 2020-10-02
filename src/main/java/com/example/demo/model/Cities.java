@@ -576,7 +576,7 @@ public class Cities {
         return cities;
     }
 
-    public int readCityIndex(String cityName) {
+    public int getCitiesIndex(String cityName) {
         int index = 0;
         for (int i = 0; i < cities.size(); i++) {
             if (cities.get(i).getCityName().equalsIgnoreCase(cityName)) {
@@ -586,7 +586,7 @@ public class Cities {
         return index;
     }
 
-    public String refactorCityName(String cityName) {
+    public String ignoreCase(String cityName) {
         for (City city : cities) {
             if(city.getCityName().equalsIgnoreCase(cityName)){
                return city.getCityName();

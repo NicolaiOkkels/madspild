@@ -15,7 +15,7 @@ public class City {
         stores.add(store);
     }
 
-    public int readStoreIndex(String storeName) {
+    public int getStoreIndex(String storeName) {
         int index = 0;
         for (int i = 0; i < stores.size(); i++) {
             if(stores.get(i).getStoreName().equals(storeName)){
@@ -27,10 +27,6 @@ public class City {
 
     public ArrayList<Store> getStores() {
         return stores;
-    }
-
-    public void setStores(ArrayList<Store> stores) {
-        this.stores = stores;
     }
 
     public void setCityName(String cityName) {

@@ -37,8 +37,4 @@ public class Store {
     public ArrayList<Product> getStoreProducts() {
         return storeProducts;
     }
-
-    public void setStoreProducts(ArrayList<Product> storeProducts) {
-        this.storeProducts = storeProducts;
-    }
 }
