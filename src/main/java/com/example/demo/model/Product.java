@@ -26,10 +26,6 @@ public class Product {
         return quantity;
     }
 
-    public int getProductID() {
-        return productID;
-    }
-
     public void setProductID(int productID) {
         this.productID = productID;
     }

@@ -29,10 +29,6 @@ public class City {
         return stores;
     }
 
-    public void setStores(ArrayList<Store> stores) {
-        this.stores = stores;
-    }
-
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
