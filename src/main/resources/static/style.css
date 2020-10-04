@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    padding-top: 5vw;
+    padding-top: 6vw;
     text-align: center;
     color: #535353;
     font-size: 25px;
@@ -594,6 +594,78 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+#button4 {
+    position: absolute;
+    margin-top: 7vw;
+    top: 0;
+    right: 2vw;
+    cursor: pointer;
+    background-color: #535353;
+    padding: 9px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: inherit;
+}
+
+#button4 p {
+    margin: 0;
+}
+
+#button4:hover {
+    opacity: 0.6;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 5;
+    /* Sit on top */
+    padding-top: 120px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+    line-height: 25px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+    padding-left: 50px;
+    width: 70%;
+}
+
+.modal-content a {
+    color: black;
+}
+
+
+/* The Close Button */
+.close {
+    color: rgb(22, 156, 104);
+    float: right;
+    font-size: 50px;
+}
+
+.close:hover,
+.close:focus {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
 /*-------Input-----*/
 
 form {
@@ -747,7 +819,7 @@ a.fa-instagram:before {
     }
 
     .topnav.responsive {
-        position: relative;
+        position: fixed;
     }
 
     .topnav.responsive .icon {
@@ -806,6 +878,18 @@ a.fa-instagram:before {
     }
     .enter input {
         margin-bottom: 6vw;
+    }
+
+
+    #button4 {
+        margin-top: 18vw;
+        padding: 5px;
+
+
+    }
+
+    #button4 p {
+        font-size: 12px;
     }
 
 }
