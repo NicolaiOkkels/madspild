@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Fejlside</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -16,6 +15,7 @@
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <th:block th:include="fragments/footer.html :: footerfiles"></th:block>
 </head>
 <body>
 <header id="myTopnav">
@@ -34,32 +34,8 @@
 
 </header>
 <h1 id="error_header">Der skete en fejl!</h1>
-<footer>
-    <div id="footer_info">
-        <div class="kontakt">
-            <p><b>Telefon</b></p>
-            <a href="tel:+4540720601">+45 40 72 06 01</a>
-        </div>
 
-        <div class="kontakt">
-            <p><b>Email</b></p>
-            <a href="mailto:info@stopspildafmad.org">info@stopspildafmad.org</a>
-        </div>
-
-        <div class="kontakt">
-            <p><b>Følg os</b></p>
-            <a href="https://www.facebook.com/Madspild" aria-label="facebook" class="fa fa-facebook"></a>
-            <a href="https://www.instagram.com/stopmadspilddanmark/" aria-label="instagram" class="fa fa-instagram"></a>
-
-        </div>
-    </div>
-    <div class="copyright">
-
-        <p> © Copyright 2020 - All Rights Reserved ❘ Designed by Nicolai, Phuc & Maja</p>
-    </div>
-
-
-</footer>
+<div th:replace="fragments/footer.html :: footer"></div>
 
 <script src="script.js"></script>
 </body>

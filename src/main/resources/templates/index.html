@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Forside</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Forside</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="myIcons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="myIcons/favicon-32x32.png">
@@ -16,6 +15,7 @@
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <th:block th:include="fragments/footer.html :: footerfiles"></th:block>
 </head>
 <body>
 
@@ -99,29 +99,7 @@
     </div>
 </section>
 
-<footer>
-    <div id="footer_info">
-        <div class="kontakt">
-            <p><b>Telefon</b></p>
-            <a href="tel:+4540720601">+45 40 72 06 01</a>
-        </div>
-
-        <div class="kontakt">
-            <p><b>Email</b></p>
-            <a href="mailto:info@stopspildafmad.org">info@stopspildafmad.org</a>
-        </div>
-
-        <div class="kontakt">
-            <p><b>Følg os</b></p>
-            <a href="https://www.facebook.com/Madspild" aria-label="facebook" class="fa fa-facebook"></a>
-            <a href="https://www.instagram.com/stopmadspilddanmark/" aria-label="instagram" class="fa fa-instagram"></a>
-
-        </div>
-    </div>
-    <div class="copyright">
-        <p> © Copyright 2020 - All Rights Reserved ❘ Designed by Nicolai, Phuc & Maja</p>
-    </div>
-</footer>
+<div th:replace="fragments/footer.html :: footer"></div>
 
 <script src="script.js"></script>
 </body>
