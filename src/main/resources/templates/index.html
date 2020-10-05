@@ -19,22 +19,7 @@
 </head>
 <body>
 
-<header id="myTopnav">
-    <div>
-        <div class="topnav">
-            <a href="/"></a>
-            <a href="/kontakt">Kontakt</a>
-            <a href="/læs-mere">Læs mere</a>
-            <a href="/samarbejdspartnere">Samarbejdspartnere</a>
-            <a href="/forbruger">Find madvarer</a>
-            <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </div>
-
-</header>
-
+<div th:replace="fragments/header.html :: header"></div>
 
 <section id="slideshowet">
     <div class="galleryContainer">
